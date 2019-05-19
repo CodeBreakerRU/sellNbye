@@ -23,8 +23,8 @@
        <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Description</th>
           <th>Price</th>
+           <th>Description</th>
           <th>Edit</th>
           <th>Delete</th>
        </tr>
