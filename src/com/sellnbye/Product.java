@@ -2,41 +2,51 @@ package com.sellnbye;
 
 public class Product {
 
-	  private String code;
+	   private String pid;
 	   private String name;
 	   private float price;
+	   private String description;
 	 
 	   public Product() {
 	 
 	   }
 	 
-	   public Product(String code, String name, float price) {
-	       this.code = code;
+	   public Product(String pid, String name, float price, String description) {
+	       this.pid = pid;
 	       this.name = name;
 	       this.price = price;
+	       this.description = description;
 	   }
 	 
-	   public String getCode() {
-	       return code;
+	   public String getpid() {
+	       return pid;
 	   }
 	 
-	   public void setCode(String code) {
-	       this.code = code;
+	   public void setpid(String pid) {
+	       this.pid = pid;
 	   }
 	 
-	   public String getName() {
+	   public String getname() {
 	       return name;
 	   }
 	 
-	   public void setName(String name) {
+	   public void setname(String name) {
 	       this.name = name;
 	   }
 	 
-	   public float getPrice() {
+	   public float getprice() {
 	       return price;
 	   }
 	 
-	   public void setPrice(float price) {
+	   public void setprice(float price) {
 	       this.price = price;
+	   }
+	   
+	   public String getdescription() {
+		   return description;
+	   }
+	   
+	   public void setdescription(String description) {
+		   this.description = description;
 	   }
 }
