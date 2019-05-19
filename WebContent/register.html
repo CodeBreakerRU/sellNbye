@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<html>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SellNbye</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="${pageContext.request.contextPath}/">Home</a></li>
+      <li><a href="${pageContext.request.contextPath}/productList">Products</a></li>
+      <li><a href="${pageContext.request.contextPath}/userInfo">My Account Info</a></li>
+      <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+      
+    </ul>
+  </div>
+</nav>
+</html>
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Login</title>
+      
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <script src="header.html"></script>
+  
+   </head>
+   <body>
+
+ 
+ <div class="container">
+      <h3 align="Left">Registration page</h3>
+      </div>
+        
+          <div class="container" >
+            <form action="reg.jsp" method="POST" >
+            <div class="form-group col-xs-6">
+  			<label for="usr">Name :</label>
+  			<input type="text" class="form-control col-xs-2" name="name" >
+			<br />
+			</div>
+			
+			<div class="form-group col-xs-6">
+  			<label for="usr">Email :</label>
+  			<input type="email" class="form-control col-sm-2" name="email" >
+			<br />
+			</div>
+			
+			<div class="form-group col-xs-6">
+  			<label for="usr">Address :</label>
+  			<input type="text" class="form-control col-sm-6"  name="address" >
+			<br />
+			</div>
+			
+			<div class="form-group col-xs-6">
+  			<label for="usr">Phone :</label>
+  			<input type="number" class="form-control" name="phone" >
+			<br />
+	</div>
+			<div class="form-group col-xs-6">
+  			<label for="w">Password:</label>
+  			<input type="password" class="form-control" name="password" >
+			</div>
+
+
+ <div class="container">		
+	</div>    
+      <button type="submit" class="btn btn-primary btn-sm" value= "Submit">Submit</button>
+	<a href="${pageContext.request.contextPath}/">Cancel</a>
+      </form>
+       </div>
+     
+   </body>
+</html>

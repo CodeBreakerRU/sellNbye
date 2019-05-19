@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+   <head>
+      <title> Insert Products </title>
+      
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <html>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SellNbye</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="${pageContext.request.contextPath}/">Home</a></li>
+      <li><a href="${pageContext.request.contextPath}/productList">Products</a></li>
+      <li><a href="${pageContext.request.contextPath}/userInfo">My Account Info</a></li>     
+    </ul>
+  </div>
+</nav>
+</html>
+   </head>
+   <body>
+     
+ 
+ <div class="container">
+      <h3 align="Left"> Insert Products </h3>
+      </div>
+          <div class="container" >
+          
+            <form action="insertProduct.jsp" method="POST" >
+            
+            <div class="form-group col-xs-4">
+  			<label for="pid">Product ID :</label>
+  			<input type="text" class="form-control col-xs-2" name="pid" required>
+			<br />
+			</div>
+			
+			<div class="form-group col-xs-8">
+  			<label for="name">Product Name :</label>
+  			<input type="text" class="form-control col-sm-2" name="name" required>
+			<br />
+			</div>
+			
+			<div class="col-sm-4">
+			<label for="cate">Category :</label>
+       		 <select class="form-control" name="cate" required>
+       		 <option> </option>
+        	  <option>Computers</option>
+         	  <option>Laptops</option>
+         	  <option>Storage</option>
+       		 </select> 
+					</div>
+
+			<div class="form-group col-xs-6">
+  			<label for="qty">Qty :</label>
+  			<input type="number" class="form-control col-sm-2" name="qty" required>
+			<br />
+			</div>
+			
+			<div class="form-group col-xs-4">
+  			<label for="price">Price :</label>
+  			<input type="text" class="form-control col-sm-6"  name="price" required>
+			<br />
+			</div>
+			
+			<div class="form-group col-xs-8">
+  			<label for="description">Description :</label>
+  			<input type="text" class="form-control" name="description" required>
+			<br />
+			
+			<div class="text-right">
+			<button align="right" type="submit" class="btn btn-info" value= "Submit">Submit</button>
+			</div>	 
+			</div>
+      </form>
+
+      <jsp:include page="_footer.jsp"></jsp:include>
+   </body>
+</html>
