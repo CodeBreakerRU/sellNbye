@@ -193,4 +193,14 @@ return null;
 //	 
 //	        pstm.executeUpdate();
 //	    }
+	    
+	    public static void DeleteUserAccount(Connection conn, String userName) throws SQLException {
+	        String sql = "Delete From users where email= ?";
+	 
+	        PreparedStatement pstm = conn.prepareStatement(sql);
+	 
+	        pstm.setString(1, userName);
+	 
+	        pstm.executeUpdate();
+	    }
 }

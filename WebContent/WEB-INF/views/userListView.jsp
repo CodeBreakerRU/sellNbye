@@ -36,8 +36,8 @@
 			<td> ${user.userName}</td>
 			 <td> ${user.address}</td>
 			  <td> ${user.phone}</td>
-            <td><a href="editUser?code=${user.userName}">Edit</a></td>
-             <td><a href="deleteUser?code=${user.userName}">Delete</a></td>
+            <td><a href="editUser?email=${user.userName}">Edit</a></td>
+             <td><a href="deleteUserAccount?email=${user.userName}">Delete</a></td>
           </tr>
           
          </c:forEach>
