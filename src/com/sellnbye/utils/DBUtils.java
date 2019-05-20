@@ -71,7 +71,33 @@ return null;
 	        return null;
 	    }
 	 
- 
+	 public static List<UserAccount> queryUserAccount(Connection conn) throws SQLException {
+	        String sql = "Select * from users";
+	 
+	        PreparedStatement pstm = conn.prepareStatement(sql);
+	 
+	        ResultSet rs = pstm.executeQuery();
+	        List<UserAccount> list = new ArrayList<UserAccount>();
+	        while (rs.next()) {
+
+	        	String name = rs.getString("name");
+	            String email = rs.getString("email");
+	            String address = rs.getString("address");
+	            String phone = rs.getString("phone");
+	            
+	            UserAccount user = new UserAccount();
+	            
+	            user.setname(name);
+	            user.setUserName(email);
+	            user.setaddress(address);
+	            user.setphone(phone);
+	            
+	            list.add(user);
+	        }
+	        return list;
+	    }
+	 
+	 
 	    public static List<Product> queryProduct(Connection conn) throws SQLException {
 	        String sql = "Select * from products";
 	 
@@ -93,6 +119,26 @@ return null;
 	            list.add(product);
 	        }
 	        return list;
+	    }
+	    
+	    public static UserAccount findUserAccount(Connection conn, String userName ) throws SQLException {
+	        String sql = "Select * from users where email=?";
+	 
+	        PreparedStatement pstm = conn.prepareStatement(sql);
+	        pstm.setString(1, userName);
+	 
+	        ResultSet rs = pstm.executeQuery();
+	 
+	        while (rs.next()) {
+
+	        	String name = rs.getString("name");
+	            String address = rs.getString("address");
+	            String phone = rs.getString("phone");
+	            
+	            UserAccount user = new UserAccount(userName, name,  address, phone);
+	            return user;
+	        }
+	        return null;
 	    }
 	 
 	   

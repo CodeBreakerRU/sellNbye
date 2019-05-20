@@ -103,7 +103,7 @@ public class JDBCFilter implements Filter {
             } catch (Exception e) {
                 e.printStackTrace();
                 ConnectionUtils.rollbackQuietly(conn);
-                throw new ServletException();
+               throw new ServletException();
             } finally {
                 ConnectionUtils.closeQuietly(conn);
             }

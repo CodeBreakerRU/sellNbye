@@ -11,8 +11,14 @@ public class UserAccount {
 	   public UserAccount() {
 	        
 	   }
-	    
-	   public String getname() {   
+	   public UserAccount(String userName, String name, String address, String phone) {
+	       this.userName = userName;
+	       this.address = address;
+	       this.phone = phone;
+	       this.name = name;
+	   }
+
+	public String getname() {   
 		   return name;
 	   }
 	   
