@@ -43,7 +43,7 @@ public class DeleteUserAccountServlet extends HttpServlet {
 	        
 	       // If has an error, redirecte to the error page.
 	       if (errorString != null) {
-	           // Store the information in the request attribute, before forward to views.
+	          
 	           request.setAttribute("errorString", errorString);
 	           // 
 	           RequestDispatcher dispatcher = request.getServletContext()
@@ -52,7 +52,7 @@ public class DeleteUserAccountServlet extends HttpServlet {
 
 	           dispatcher.forward(request, response);
 	       }
-	       // If everything nice.
+	       
 	       // Redirect to the product listing page.        
 	       else {
 	           response.sendRedirect(request.getContextPath() + "/userList");
